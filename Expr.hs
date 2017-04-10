@@ -117,7 +117,7 @@ arbExpr s =
             , (s, do return X)
             ]
 
---orders expression : 5 * cos(x) + 0.5 * sin (2.0*x) -> cos(x) * 5 + sin (x * 2.0) * 0.5
+-- orders expression : 5 * cos(x) + 0.5 * sin (2.0*x) -> cos(x) * 5 + sin (x * 2.0) * 0.5
 ordExpr :: Expr -> Expr
 ordExpr (Add a b) = ordAdd a b
 ordExpr (Mul a b) = ordMul a b
